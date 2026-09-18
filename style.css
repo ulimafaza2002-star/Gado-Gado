@@ -1,0 +1,346 @@
+css 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+html { 
+    scroll-behavior: smooth; 
+} 
+ 
+body { 
+    font-family: Arial, sans-serif; 
+    background: #fff5f8; 
+    color: #4a3038; 
+    line-height: 1.6; 
+} 
+ 
+ 
+/* ========================= 
+   NAVBAR 
+========================= */ 
+ 
+header { 
+    background: #e75480; 
+    padding: 18px 8%; 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+} 
+ 
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+} 
+ 
+nav h1 { 
+    color: white; 
+    font-size: 24px; 
+    letter-spacing: 2px; 
+} 
+ 
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+} 
+ 
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+} 
+ 
+nav a:hover { 
+    color: #ffd6e2; 
+} 
+ 
+ 
+/* ========================= 
+   HOME 
+========================= */ 
+ 
+.home { 
+    min-height: 90vh; 
+ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+ 
+    text-align: center; 
+ 
+    background: linear-gradient( 
+        rgba(231, 84, 128, 0.88), 
+        rgba(255, 182, 202, 0.88) 
+    ); 
+ 
+    padding: 40px 10%; 
+} 
+ 
+.home-content { 
+    max-width: 750px; 
+    color: white; 
+} 
+ 
+.group { 
+    font-size: 14px; 
+    letter-spacing: 3px; 
+    margin-bottom: 15px; 
+} 
+ 
+.home h2 { 
+    font-size: 70px; 
+    margin-bottom: 5px; 
+} 
+ 
+.tagline { 
+    font-size: 28px; 
+    font-weight: bold; 
+    font-style: italic; 
+    color: #fff0f4; 
+    margin-bottom: 20px; 
+} 
+ 
+.home-content > p:not(.group):not(.tagline) { 
+    font-size: 18px; 
+    margin-bottom: 30px; 
+} 
+ 
+ 
+/* ========================= 
+   BUTTON 
+========================= */ 
+ 
+.button { 
+    display: inline-block; 
+ 
+    padding: 13px 28px; 
+ 
+    background: white; 
+    color: #e75480; 
+ 
+    text-decoration: none; 
+    font-weight: bold; 
+ 
+    border-radius: 25px; 
+ 
+    transition: 0.3s; 
+} 
+ 
+.button:hover { 
+    transform: translateY(-3px); 
+    background: #ffe4ec; 
+} 
+ 
+ 
+/* ========================= 
+   GENERAL SECTION 
+========================= */ 
+ 
+.section { 
+    min-height: 80vh; 
+    padding: 90px 10%; 
+} 
+ 
+.section-label { 
+    text-align: center; 
+    color: #e75480; 
+    font-size: 13px; 
+    font-weight: bold; 
+    letter-spacing: 3px; 
+} 
+ 
+.section > h2 { 
+    text-align: center; 
+    font-size: 40px; 
+    color: #c93667; 
+    margin-bottom: 45px; 
+} 
+ 
+ 
+/* ========================= 
+   ABOUT FOOD 
+========================= */ 
+ 
+.food-card { 
+    display: flex; 
+    gap: 45px; 
+ 
+    background: white; 
+ 
+    padding: 35px; 
+ 
+    border-radius: 20px; 
+ 
+    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
+} 
+ 
+ 
+/* TEMPAT FOTO GADO-GADO */ 
+ 
+.food-image { 
+    width: 45%; 
+    min-height: 350px; 
+ 
+    background: #ffdce7; 
+ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+ 
+    border-radius: 15px; 
+ 
+    color: #c93667; 
+    font-weight: bold; 
+} 
+ 
+.food-info { 
+    flex: 1; 
+} 
+ 
+.food-info h3 { 
+    font-size: 35px; 
+    color: #c93667; 
+    margin-bottom: 20px; 
+} 
+ 
+.food-info h4 { 
+    color: #e75480; 
+    margin-top: 15px; 
+    margin-bottom: 5px; 
+} 
+ 
+.rating { 
+    letter-spacing: 4px; 
+    color: #f3a712; 
+    font-size: 20px; 
+} 
+ 
+.price { 
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #c93667; 
+} 
+ 
+ 
+/* ========================= 
+   RECIPE IMAGE 
+========================= */ 
+ 
+.recipe-section { 
+    text-align: center; 
+} 
+ 
+.recipe-image { 
+    max-width: 900px; 
+    margin: auto; 
+ 
+    background: white; 
+ 
+    padding: 20px; 
+ 
+    border-radius: 20px; 
+ 
+    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
+} 
+ 
+.recipe-image img { 
+    width: 100%; 
+    max-height: 900px; 
+ 
+    object-fit: contain; 
+ 
+    border-radius: 12px; 
+ 
+    display: block; 
+} 
+ 
+ 
+/* ========================= 
+   VIDEO 
+========================= */ 
+ 
+.video-container { 
+    max-width: 900px; 
+    margin: auto; 
+ 
+    background: white; 
+ 
+    padding: 20px; 
+ 
+    border-radius: 20px; 
+ 
+    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
+} 
+ 
+.video-container video { 
+    width: 100%; 
+    display: block; 
+ 
+    border-radius: 15px; 
+} 
+ 
+ 
+/* ========================= 
+   FOOTER 
+========================= */ 
+ 
+footer { 
+    background: #c93667; 
+    color: white; 
+ 
+    text-align: center; 
+ 
+    padding: 30px; 
+} 
+ 
+footer h3 { 
+    font-size: 25px; 
+    letter-spacing: 2px; 
+    margin-bottom: 5px; 
+} 
+ 
+footer p { 
+    margin: 3px; 
+} 
+ 
+ 
+/* ========================= 
+   MOBILE 
+========================= */ 
+ 
+@media (max-width: 700px) { 
+ 
+    nav { 
+        flex-direction: column; 
+        gap: 15px; 
+    } 
+ 
+    nav ul { 
+        gap: 15px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    } 
+ 
+    .home h2 { 
+        font-size: 48px; 
+    } 
+ 
+    .tagline { 
+        font-size: 21px; 
+    } 
+ 
+    .food-card { 
+        flex-direction: column; 
+    } 
+ 
+    .food-image { 
+        width: 100%; 
+    } 
+ 
+    .section { 
+        padding: 60px 6%; 
+    } 
+}
