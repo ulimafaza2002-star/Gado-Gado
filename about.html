@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Food | Gado-Gado</title>
+    <title data-i18n="page_title_about">About Food | Gado-Gado</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -31,11 +31,16 @@
             <h1>GADO-GADO</h1>
 
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Food</a></li>
-                <li><a href="recipe.html">Recipe</a></li>
-                <li><a href="video.html">Video</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About Food</a></li>
+                <li><a href="recipe.html" data-i18n="nav_recipe">Recipe</a></li>
+                <li><a href="video.html" data-i18n="nav_video">Video</a></li>
             </ul>
+
+            <div class="lang-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="id">ID</button>
+            </div>
         </nav>
     </header>
 
@@ -43,37 +48,31 @@
     <!-- ABOUT FOOD -->
     <section class="section">
 
-        <p class="section-label">ABOUT THE FOOD</p>
-
-        <h2>About Gado-Gado</h2>
+        <p class="section-label" data-i18n="about_label">ABOUT THE FOOD</p>
+        <h2 data-i18n="about_heading">About Gado-Gado</h2>
 
         <div class="food-card">
 
-            <!-- GAMBAR GADO-GADO -->
             <div class="food-image">
                 <img src="gado-gado.jpg" alt="Gado-Gado">
             </div>
 
-
-            <!-- FOOD INFORMATION -->
             <div class="food-info">
 
                 <h3>Gado-Gado</h3>
 
-                <h4>Tagline</h4>
-                <p>
-                    Gado-Gado Menggoda-Goda
-                </p>
+                <h4 data-i18n="label_tagline">Tagline</h4>
+                <p>Gado-Gado Menggoda-Goda</p>
 
-                <h4>Description</h4>
-                <p>
+                <h4 data-i18n="label_description">Description</h4>
+                <p data-i18n="about_desc">
                     Gado-gado is a traditional Indonesian dish
                     consisting of various vegetables, potatoes,
                     eggs, tempeh, and delicious peanut sauce.
                 </p>
 
-                <h4>History</h4>
-                <p>
+                <h4 data-i18n="label_history">History</h4>
+                <p data-i18n="about_history_1">
                     Gado-gado is a traditional Indonesian dish
                     that has been enjoyed for generations. The dish
                     is made from a variety of vegetables, tofu,
@@ -81,7 +80,7 @@
                     served with a rich and flavorful peanut sauce.
                 </p>
 
-                <p>
+                <p data-i18n="about_history_2">
                     The exact origin of gado-gado is not completely
                     known, but it is strongly associated with
                     Indonesian cuisine, especially in Java and
@@ -91,21 +90,31 @@
                     of textures.
                 </p>
 
-                <h4>Review</h4>
-                <p class="rating">
-                    ★★★★★
-                </p>
-
-                <p>
-                    5/5 — Delicious!
-                </p>
-
-                <h4>Price</h4>
-                <p class="price">
-                    Rp 15.000 - Rp 25.000
-                </p>
+                <h4 data-i18n="label_price">Price</h4>
+                <p class="price">Rp 15.000 - Rp 25.000</p>
 
             </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REVIEW SECTION -->
+    <section class="section rev-section">
+
+        <p class="section-label" data-i18n="review_label">WHAT PEOPLE SAY</p>
+        <h2 data-i18n="review_heading">Reviews from Our Visitors</h2>
+
+        <div class="rev-carousel">
+
+            <div class="rev-card" id="review-card">
+                <p class="rev-stars" id="review-stars">★★★★★</p>
+                <p class="rev-text" id="review-text">"..."</p>
+                <p class="rev-author" id="review-author">— Anonymous</p>
+            </div>
+
+            <div class="rev-dots" id="review-dots"></div>
 
         </div>
 
@@ -116,8 +125,9 @@
     <footer>
         <h3>GADO-GADO</h3>
         <p>Gado-Gado Menggoda-Goda</p>
-        <p>PK Project • Kelompok 5</p>
+        <p data-i18n="footer_team">PK Project • Group 5</p>
     </footer>
 
+    <script src="language.js"></script>
 </body>
 </html>
