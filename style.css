@@ -1,4 +1,7 @@
-css 
+/* ========================= 
+   RESET & BASE 
+========================= */
+
 * { 
     margin: 0; 
     padding: 0; 
@@ -33,6 +36,7 @@ nav {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    gap: 20px;
 } 
  
 nav h1 { 
@@ -59,23 +63,53 @@ nav a:hover {
  
  
 /* ========================= 
+   LANGUAGE SWITCH 
+========================= */ 
+ 
+.lang-switch {
+    display: flex;
+    gap: 6px;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    padding: 6px 14px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    letter-spacing: 1px;
+    font-family: inherit;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn.active {
+    background: white;
+    color: #e75480;
+}
+
+
+/* ========================= 
    HOME 
 ========================= */ 
  
 .home { 
     min-height: 90vh; 
- 
     display: flex; 
     justify-content: center; 
     align-items: center; 
- 
     text-align: center; 
- 
     background: linear-gradient( 
         rgba(231, 84, 128, 0.88), 
         rgba(255, 182, 202, 0.88) 
     ); 
- 
     padding: 40px 10%; 
 } 
  
@@ -115,18 +149,17 @@ nav a:hover {
  
 .button { 
     display: inline-block; 
- 
     padding: 13px 28px; 
- 
     background: white; 
     color: #e75480; 
- 
     text-decoration: none; 
     font-weight: bold; 
- 
     border-radius: 25px; 
- 
     transition: 0.3s; 
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
 } 
  
 .button:hover { 
@@ -167,31 +200,20 @@ nav a:hover {
 .food-card { 
     display: flex; 
     gap: 45px; 
- 
     background: white; 
- 
     padding: 35px; 
- 
     border-radius: 20px; 
- 
     box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
 } 
- 
- 
-/* TEMPAT FOTO GADO-GADO */ 
  
 .food-image { 
     width: 45%; 
     min-height: 350px; 
- 
     background: #ffdce7; 
- 
     display: flex; 
     justify-content: center; 
     align-items: center; 
- 
     border-radius: 15px; 
- 
     color: #c93667; 
     font-weight: bold; 
 } 
@@ -236,24 +258,17 @@ nav a:hover {
 .recipe-image { 
     max-width: 900px; 
     margin: auto; 
- 
     background: white; 
- 
     padding: 20px; 
- 
     border-radius: 20px; 
- 
     box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
 } 
  
 .recipe-image img { 
     width: 100%; 
     max-height: 900px; 
- 
     object-fit: contain; 
- 
     border-radius: 12px; 
- 
     display: block; 
 } 
  
@@ -265,20 +280,15 @@ nav a:hover {
 .video-container { 
     max-width: 900px; 
     margin: auto; 
- 
     background: white; 
- 
     padding: 20px; 
- 
     border-radius: 20px; 
- 
     box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
 } 
  
 .video-container video { 
     width: 100%; 
     display: block; 
- 
     border-radius: 15px; 
 } 
  
@@ -290,9 +300,7 @@ nav a:hover {
 footer { 
     background: #c93667; 
     color: white; 
- 
     text-align: center; 
- 
     padding: 30px; 
 } 
  
@@ -307,6 +315,238 @@ footer p {
 } 
  
  
+/* ========================= 
+   FEEDBACK SECTION (HOME) 
+========================= */ 
+
+.fb-section {
+    background: #fff5f8;
+}
+
+.fb-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.fb-form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.fb-form label {
+    color: #c93667;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+.fb-form label:first-of-type {
+    margin-top: 0;
+}
+
+.fb-form input,
+.fb-form select,
+.fb-form textarea {
+    padding: 10px 14px;
+    border: 2px solid #ffdce7;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #4a3038;
+    background: #fffafc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.fb-form input:focus,
+.fb-form select:focus,
+.fb-form textarea:focus {
+    border-color: #e75480;
+    background: white;
+}
+
+.fb-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.fb-submit {
+    margin-top: 20px;
+    background: #e75480;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 13px 28px;
+    align-self: flex-start;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.fb-submit:hover {
+    background: #c93667;
+    transform: translateY(-3px);
+}
+
+.fb-status {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2e9e4f;
+    min-height: 20px;
+}
+
+.fb-list-wrapper h3 {
+    color: #c93667;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.fb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.fb-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.fb-list::-webkit-scrollbar-thumb {
+    background: #e75480;
+    border-radius: 4px;
+}
+
+.fb-item {
+    background: white;
+    padding: 15px 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(231, 84, 128, 0.1);
+    border-left: 4px solid #e75480;
+}
+
+.fb-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.fb-item-name {
+    font-weight: bold;
+    color: #c93667;
+}
+
+.fb-item-stars {
+    color: #f3a712;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.fb-item-text {
+    color: #4a3038;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.fb-empty {
+    color: #b58a99;
+    font-style: italic;
+    text-align: center;
+    padding: 30px 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(231, 84, 128, 0.08);
+}
+
+
+/* ========================= 
+   REVIEW CAROUSEL (ABOUT) 
+========================= */
+
+.rev-section {
+    background: linear-gradient(135deg, #fff5f8, #ffe4ec);
+}
+
+.rev-carousel {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rev-card {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(231, 84, 128, 0.18);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.rev-card.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.rev-stars {
+    color: #f3a712;
+    font-size: 26px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.rev-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #4a3038;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.rev-author {
+    font-weight: bold;
+    color: #e75480;
+    font-size: 15px;
+}
+
+.rev-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.rev-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffd6e2;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.rev-dots span.active {
+    background: #e75480;
+    transform: scale(1.3);
+}
+
+
 /* ========================= 
    MOBILE 
 ========================= */ 
@@ -323,6 +563,10 @@ footer p {
         flex-wrap: wrap; 
         justify-content: center; 
     } 
+
+    .lang-switch {
+        margin-left: 0;
+    }
  
     .home h2 { 
         font-size: 48px; 
@@ -342,5 +586,23 @@ footer p {
  
     .section { 
         padding: 60px 6%; 
-    } 
+    }
+
+    .fb-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .fb-submit {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .rev-card {
+        padding: 30px 22px;
+    }
+
+    .rev-text {
+        font-size: 16px;
+    }
 }
