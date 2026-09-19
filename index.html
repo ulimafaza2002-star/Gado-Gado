@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gado-Gado | Kelompok 5</title>
+    <title data-i18n="page_title_home">Gado-Gado | Group 5</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
         .home {
-            background:
-                url("gado-gado.jpg");
+            background: url("gado-gado.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -25,38 +24,75 @@
             <h1>GADO-GADO</h1>
 
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Food</a></li>
-                <li><a href="recipe.html">Recipe</a></li>
-                <li><a href="video.html">Video</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About Food</a></li>
+                <li><a href="recipe.html" data-i18n="nav_recipe">Recipe</a></li>
+                <li><a href="video.html" data-i18n="nav_video">Video</a></li>
             </ul>
+
+            <div class="lang-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="id">ID</button>
+            </div>
         </nav>
     </header>
 
 
     <!-- HOME -->
     <section class="home">
-
         <div class="home-content">
-
-            <p class="group">
-                PK PROJECT • KELOMPOK 5
-            </p>
-
+            <p class="group" data-i18n="home_group">PK PROJECT • GROUP 5</p>
             <h2>Gado-Gado</h2>
-
-            <p class="tagline">
-                Gado-Gado Menggoda-Goda
-            </p>
-
-            <p>
+            <p class="tagline">Gado-Gado Menggoda-Goda</p>
+            <p data-i18n="home_desc">
                 Discover the delicious taste of one of
                 Indonesia's traditional foods.
             </p>
+            <a href="about.html" class="button" data-i18n="home_button">Discover More</a>
+        </div>
+    </section>
 
-            <a href="about.html" class="button">
-                Discover More
-            </a>
+
+    <!-- FEEDBACK SECTION -->
+    <section class="section fb-section">
+
+        <p class="section-label" data-i18n="feedback_label">YOUR OPINION MATTERS</p>
+        <h2 data-i18n="feedback_heading">Give Us Your Feedback</h2>
+
+        <div class="fb-wrapper">
+
+            <form id="feedback-form" class="fb-form">
+
+                <label for="fb-name" data-i18n="feedback_name">Your Name</label>
+                <input type="text" id="fb-name" required maxlength="30"
+                       data-i18n-placeholder="feedback_name_ph"
+                       placeholder="e.g. Budi">
+
+                <label for="fb-rating" data-i18n="feedback_rating">Rating</label>
+                <select id="fb-rating" required>
+                    <option value="5">★★★★★  (5)</option>
+                    <option value="4">★★★★☆  (4)</option>
+                    <option value="3">★★★☆☆  (3)</option>
+                    <option value="2">★★☆☆☆  (2)</option>
+                    <option value="1">★☆☆☆☆  (1)</option>
+                </select>
+
+                <label for="fb-message" data-i18n="feedback_message">Your Feedback</label>
+                <textarea id="fb-message" rows="4" required maxlength="200"
+                          data-i18n-placeholder="feedback_message_ph"
+                          placeholder="Tell us what you think..."></textarea>
+
+                <button type="submit" class="fb-submit" data-i18n="feedback_submit">
+                    Send Feedback
+                </button>
+
+                <p id="feedback-status" class="fb-status"></p>
+            </form>
+
+            <div class="fb-list-wrapper">
+                <h3 data-i18n="feedback_recent">Recent Feedback</h3>
+                <div id="feedback-list" class="fb-list"></div>
+            </div>
 
         </div>
 
@@ -67,9 +103,9 @@
     <footer>
         <h3>GADO-GADO</h3>
         <p>Gado-Gado Menggoda-Goda</p>
-        <p>PK Project • Kelompok 5</p>
+        <p data-i18n="footer_team">PK Project • Group 5</p>
     </footer>
 
+    <script src="language.js"></script>
 </body>
 </html>
-```
