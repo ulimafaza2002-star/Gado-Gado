@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video | Gado-Gado</title>
+    <title data-i18n="page_title_video">Video | Gado-Gado</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,35 +12,45 @@
     <!-- NAVBAR -->
     <header>
         <nav>
-            <h1>GADO-GADO</h1>
+            <h1 id="site-logo">GADO-GADO</h1>
 
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Food</a></li>
-                <li><a href="recipe.html">Recipe</a></li>
-                <li><a href="video.html">Video</a></li>
+                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav_about">About Food</a></li>
+                <li><a href="recipe.html" data-i18n="nav_recipe">Recipe</a></li>
+                <li><a href="video.html" data-i18n="nav_video">Video</a></li>
             </ul>
+
+            <div class="lang-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="id">ID</button>
+            </div>
         </nav>
     </header>
 
 
-    <!-- VIDEO -->
+    <!-- VIDEO SECTION -->
     <section class="section">
 
-        <p class="section-label">WATCH OUR VIDEO</p>
-
-        <h2>Gado-Gado Video</h2>
-
+        <p class="section-label" data-i18n="video_label">WATCH THE VIDEO</p>
+        <h2 data-i18n="video_heading">How to Make Gado-Gado</h2>
 
         <div class="video-container">
-
-            <!-- TEMPAT VIDEO -->
-            <video controls>
-                <source src="video/gado-gado.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/g5-8h5gUVVE"
+                    title="Gado-Gado Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
+
+        <p class="video-caption" data-i18n="video_caption">
+            A short tutorial on how to make authentic Indonesian Gado-Gado.
+        </p>
 
     </section>
 
@@ -49,9 +59,9 @@
     <footer>
         <h3>GADO-GADO</h3>
         <p>Gado-Gado Menggoda-Goda</p>
-        <p>PK Project • Kelompok 5</p>
+        <p data-i18n="footer_team">PK Project • Group 5</p>
     </footer>
 
+    <script src="language.js"></script>
 </body>
 </html>
-```
