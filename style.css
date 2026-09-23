@@ -277,19 +277,47 @@ nav a:hover {
    VIDEO 
 ========================= */ 
  
-.video-container { 
-    max-width: 900px; 
-    margin: auto; 
-    background: white; 
-    padding: 20px; 
-    border-radius: 20px; 
-    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15); 
-} 
- 
-.video-container video { 
-    width: 100%; 
-    display: block; 
-    border-radius: 15px; 
+/* ========================= 
+   YOUTUBE VIDEO 
+========================= */
+
+.video-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-caption {
+    text-align: center;
+    color: #6b5560;
+    font-size: 15px;
+    margin-top: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    line-height: 1.6;
+}
 } 
  
  
