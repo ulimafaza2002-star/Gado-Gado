@@ -4,9 +4,9 @@
    ========================================================= */
 
 const translations = {
-    en: {        about_label:   "ABOUT THE FOOD",
-               page_title_recipe: "Recipe | Gado-Gado",
-      
+    en: {       
+         
+        about_label: "ABOUT THE FOOD",
         page_title_recipe: "Recipe | Gado-Gado",
         recipe_label: "RECIPE",
         recipe_heading: "Gado-Gado Recipe",
