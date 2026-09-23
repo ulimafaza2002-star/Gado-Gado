@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Recipe | Gado-Gado</title>
+    <title data-i18n="page_title_recipe">Recipe | Gado-Gado</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -32,14 +32,19 @@
 <header>
     <nav>
 
-        <h1>GADO-GADO</h1>
+        <h1 id="site-logo">GADO-GADO</h1>
 
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Food</a></li>
-            <li><a href="recipe.html">Recipe</a></li>
-            <li><a href="video.html">Video</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Food</a></li>
+            <li><a href="recipe.html" data-i18n="nav_recipe">Recipe</a></li>
+            <li><a href="video.html" data-i18n="nav_video">Video</a></li>
         </ul>
+
+        <div class="lang-switch">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="id">ID</button>
+        </div>
 
     </nav>
 </header>
@@ -47,20 +52,61 @@
 
 <section class="section recipe-section">
 
-    <p class="section-label">
+    <p class="section-label" data-i18n="recipe_label">
         RECIPE
     </p>
 
-    <h2>
+    <h2 data-i18n="recipe_heading">
         Gado-Gado Recipe
     </h2>
 
 
-    <!-- GAMBAR RESEP LU -->
-
+    <!-- GAMBAR RESEP -->
     <div class="recipe-picture">
-
         <img src="recipe.jpg" alt="Gado-Gado Recipe">
+    </div>
+
+
+    <!-- ============================== -->
+    <!-- DETAIL RESEP (BAHAN & CARA)    -->
+    <!-- ============================== -->
+    <div class="recipe-details">
+
+        <!-- BAHAN-BAHAN -->
+        <div class="recipe-block">
+            <h3 data-i18n="recipe_ingredients">Ingredients</h3>
+            <ul class="recipe-list">
+                <li data-i18n="ing_1">200g fried peanuts</li>
+                <li data-i18n="ing_2">2 pcs white tofu</li>
+                <li data-i18n="ing_3">1 block tempeh</li>
+                <li data-i18n="ing_4">100g bean sprouts</li>
+                <li data-i18n="ing_5">100g spinach</li>
+                <li data-i18n="ing_6">100g long beans</li>
+                <li data-i18n="ing_7">2 boiled eggs</li>
+                <li data-i18n="ing_8">2 potatoes, boiled</li>
+                <li data-i18n="ing_9">3 tbsp sweet soy sauce</li>
+                <li data-i18n="ing_10">2 cloves garlic</li>
+                <li data-i18n="ing_11">3 red chilies</li>
+                <li data-i18n="ing_12">1 tsp brown sugar</li>
+                <li data-i18n="ing_13">Salt to taste</li>
+                <li data-i18n="ing_14">Fried shallots for topping</li>
+            </ul>
+        </div>
+
+        <!-- CARA MEMBUAT -->
+        <div class="recipe-block">
+            <h3 data-i18n="recipe_steps"> How to Make</h3>
+            <ol class="recipe-steps">
+                <li data-i18n="step_1">Fry the peanuts until golden brown, then let them cool.</li>
+                <li data-i18n="step_2">Grind the fried peanuts with garlic, chilies, brown sugar, and salt until smooth.</li>
+                <li data-i18n="step_3">Add sweet soy sauce and a little warm water to the peanut sauce, mix well.</li>
+                <li data-i18n="step_4">Fry the tofu and tempeh until golden brown, then cut into cubes.</li>
+                <li data-i18n="step_5">Blanch the vegetables (sprouts, spinach, long beans) briefly, then drain.</li>
+                <li data-i18n="step_6">Arrange vegetables, tofu, tempeh, potatoes, and eggs on a plate.</li>
+                <li data-i18n="step_7">Pour the peanut sauce on top and sprinkle with fried shallots.</li>
+                <li data-i18n="step_8">Serve with crackers (krupuk) and enjoy!</li>
+            </ol>
+        </div>
 
     </div>
 
@@ -73,10 +119,10 @@
 
     <p>Gado-Gado Menggoda-Goda</p>
 
-    <p>PK Project • Group 5</p>
+    <p data-i18n="footer_team">PK Project • Group 5</p>
 
 </footer>
 
+<script src="language.js"></script>
 </body>
 </html>
-```
