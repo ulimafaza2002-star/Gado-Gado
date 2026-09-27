@@ -5,7 +5,7 @@
 * { 
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box; 
+    box-sizing:border-box; 
 } 
  
 html { 
@@ -15,7 +15,7 @@ html {
 body { 
     font-family: Arial, sans-serif; 
     background: #fff5f8; 
-    color: #8b5a6b;
+    color: #4a3038; 
     line-height: 1.6; 
 } 
  
@@ -274,6 +274,10 @@ nav a:hover {
  
  
 /* ========================= 
+   VIDEO 
+========================= */ 
+ 
+/* ========================= 
    YOUTUBE VIDEO 
 ========================= */
 
@@ -288,7 +292,7 @@ nav a:hover {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 15px;
@@ -305,7 +309,7 @@ nav a:hover {
 
 .video-caption {
     text-align: center;
-    color: #8b5a6b;
+    color: #6b5560;
     font-size: 15px;
     margin-top: 25px;
     max-width: 700px;
@@ -314,6 +318,7 @@ nav a:hover {
     font-style: italic;
     line-height: 1.6;
 }
+} 
  
  
 /* ========================= 
@@ -383,7 +388,7 @@ footer p {
     border-radius: 10px;
     font-family: inherit;
     font-size: 14px;
-    color: #8b5a6b;
+    color: #4a3038;
     background: #fffafc;
     outline: none;
     transition: 0.2s;
@@ -480,7 +485,7 @@ footer p {
 }
 
 .fb-item-text {
-    color: #8b5a6b;
+    color: #4a3038;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -537,7 +542,7 @@ footer p {
 .rev-text {
     font-size: 18px;
     font-style: italic;
-    color: #8b5a6b;
+    color: #4a3038;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -567,99 +572,6 @@ footer p {
 .rev-dots span.active {
     background: #e75480;
     transform: scale(1.3);
-}
-
-
-/* ========================= 
-   RECIPE DETAILS (BAHAN & CARA) 
-========================= */
-
-.recipe-details {
-    max-width: 900px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.recipe-block {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15);
-}
-
-.recipe-block h3 {
-    color: #c93667;
-    font-size: 22px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #ffe4ec;
-}
-
-.recipe-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recipe-list li {
-    padding: 10px 0 10px 28px;
-    position: relative;
-    color: #8b5a6b;
-    line-height: 1.6;
-    border-bottom: 1px dashed #ffe4ec;
-}
-
-.recipe-list li:last-child {
-    border-bottom: none;
-}
-
-.recipe-list li::before {
-    content: "•";
-    position: absolute;
-    left: 8px;
-    top: 10px;
-    color: #e75480;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.recipe-steps {
-    list-style: none;
-    counter-reset: step-counter;
-    padding: 0;
-    margin: 0;
-}
-
-.recipe-steps li {
-    counter-increment: step-counter;
-    padding: 12px 0 12px 45px;
-    position: relative;
-    color: #8b5a6b;
-    line-height: 1.6;
-    border-bottom: 1px dashed #ffe4ec;
-}
-
-.recipe-steps li:last-child {
-    border-bottom: none;
-}
-
-.recipe-steps li::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 30px;
-    height: 30px;
-    background: #e75480;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
 }
 
 
@@ -721,7 +633,107 @@ footer p {
     .rev-text {
         font-size: 16px;
     }
+}
+/* ========================= 
+   RECIPE DETAILS (BAHAN & CARA) 
+========================= */
 
+.recipe-details {
+    max-width: 900px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.recipe-block {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(231, 84, 128, 0.15);
+}
+
+.recipe-block h3 {
+    color: #c93667;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ffe4ec;
+}
+
+/* --- BAHAN-BAHAN --- */
+.recipe-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe-list li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    color: #4a3038;
+    line-height: 1.6;
+    border-bottom: 1px dashed #ffe4ec;
+}
+
+.recipe-list li:last-child {
+    border-bottom: none;
+}
+
+.recipe-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 14px;
+}
+
+/* --- CARA MEMBUAT --- */
+.recipe-steps {
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe-steps li {
+    counter-increment: step-counter;
+    padding: 12px 0 12px 45px;
+    position: relative;
+    color: #4a3038;
+    line-height: 1.6;
+    border-bottom: 1px dashed #ffe4ec;
+}
+
+.recipe-steps li:last-child {
+    border-bottom: none;
+}
+
+.recipe-steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    background: #e75480;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 700px) {
     .recipe-details {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -733,6 +745,6 @@ footer p {
     }
 
     .recipe-block h3 {
-        font-size: 22px;
+        font-size: 19px;
     }
 }
