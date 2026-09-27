@@ -15,7 +15,7 @@ html {
 body { 
     font-family: Arial, sans-serif; 
     background: #fff5f8; 
-    color: #8b5a6b;
+    color: #8b5a6b; 
     line-height: 1.6; 
 } 
  
@@ -115,7 +115,7 @@ nav a:hover {
  
 .home-content { 
     max-width: 750px; 
-    color: white; 
+    color: #000000;      /* ← HITAM */
 } 
  
 .group { 
@@ -133,7 +133,7 @@ nav a:hover {
     font-size: 28px; 
     font-weight: bold; 
     font-style: italic; 
-    color: #fff0f4; 
+    color: #000000;      /* ← HITAM */
     margin-bottom: 20px; 
 } 
  
@@ -730,9 +730,5 @@ footer p {
 
     .recipe-block {
         padding: 22px;
-    }
-
-    .recipe-block h3 {
-        font-size: 22px;
     }
 }
