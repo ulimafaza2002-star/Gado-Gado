@@ -15,7 +15,7 @@ html {
 body { 
     font-family: Arial, sans-serif; 
     background: #fff5f8; 
-    color: #8b5a6b;  
+    color: #8b5a6b;
     line-height: 1.6; 
 } 
  
@@ -288,7 +288,7 @@ nav a:hover {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 15px;
@@ -305,7 +305,7 @@ nav a:hover {
 
 .video-caption {
     text-align: center;
-    color: #8b5a6b;  
+    color: #8b5a6b;
     font-size: 15px;
     margin-top: 25px;
     max-width: 700px;
@@ -383,7 +383,7 @@ footer p {
     border-radius: 10px;
     font-family: inherit;
     font-size: 14px;
-    color: #8b5a6b;  
+    color: #8b5a6b;
     background: #fffafc;
     outline: none;
     transition: 0.2s;
@@ -480,7 +480,7 @@ footer p {
 }
 
 .fb-item-text {
-    color: #8b5a6b; 
+    color: #8b5a6b;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -537,7 +537,7 @@ footer p {
 .rev-text {
     font-size: 18px;
     font-style: italic;
-    color: #8b5a6b;   
+    color: #8b5a6b;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -577,7 +577,6 @@ footer p {
 .recipe-details {
     max-width: 900px;
     margin: 40px auto 0;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -598,7 +597,6 @@ footer p {
     border-bottom: 2px solid #ffe4ec;
 }
 
-/* --- BAHAN-BAHAN --- */
 .recipe-list {
     list-style: none;
     padding: 0;
@@ -608,7 +606,7 @@ footer p {
 .recipe-list li {
     padding: 10px 0 10px 28px;
     position: relative;
-    color: #8b5a6b; 
+    color: #8b5a6b;
     line-height: 1.6;
     border-bottom: 1px dashed #ffe4ec;
 }
@@ -618,14 +616,15 @@ footer p {
 }
 
 .recipe-list li::before {
-    content: "";
+    content: "•";
     position: absolute;
-    left: 0;
+    left: 8px;
     top: 10px;
-    font-size: 14px;
+    color: #e75480;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-/* --- CARA MEMBUAT --- */
 .recipe-steps {
     list-style: none;
     counter-reset: step-counter;
@@ -651,19 +650,14 @@ footer p {
     position: absolute;
     left: 0;
     top: 12px;
-
     width: 30px;
     height: 30px;
-
     background: #e75480;
     color: white;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-weight: bold;
     font-size: 14px;
 }
@@ -739,6 +733,6 @@ footer p {
     }
 
     .recipe-block h3 {
-        font-size: 19px;
+        font-size: 22px;
     }
 }
